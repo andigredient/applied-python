@@ -184,7 +184,7 @@ if file is not None:
             if (abs(data_from_API['main']['temp'] - result['Средняя температура'].iloc[0]) > 2 * result['Стандартное отклонение'].iloc[0]):
                 st.write(f"Аномалия: ({data_from_API['main']['temp']} - {result['Средняя температура'].iloc[0]}) > 2 * {result['Стандартное отклонение'].iloc[0]} \n")
             else:
-                st.write(f"Аномалии на данный момент нет: ({data_from_API['main']['temp']} - {result['Средняя температура'].iloc[0]}) > 2 * {result['Стандартное отклонение'].iloc[0]} \n")
+                st.write(f"Аномалии на данный момент нет: ({data_from_API['main']['temp']} - {result['Средняя температура'].iloc[0]}) < 2 * {result['Стандартное отклонение'].iloc[0]} \n")
 
         
 
